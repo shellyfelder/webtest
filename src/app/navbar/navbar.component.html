@@ -1,0 +1,22 @@
+<div class="navbar">
+   <ul>
+      <li (click)="changePage('Home')">Home</li>
+      <li (click)="changePage('About')">About</li>
+      <li (click)="changePage('Books')">Books</li>
+      <li (click)="changePage('Art')">Art</li>
+      <li (click)="changePage('Home')"><img class="josephine" src="assets/images/josephine.jpg"/></li> 
+      <li (click)="changePage('Blog')">Blog</li>
+      <li (click)="changePage('Other')">Other</li>
+      <li (click)="changePage('FAQ')">FAQ</li>
+      <li (click)="changePage('Contact')">Contact</li>
+   </ul>
+</div>
+
+<home *ngIf="pageTitle === 'Home'"></home>
+<div class="page">
+   <!-- <about *ngIf="pageTitle === 'About'"></about>
+   <books *ngIf="pageTitle === 'Books'"></books>
+   <art *ngIf="pageTitle === 'Art'"></art>
+   <faq *ngIf="pageTitle === 'FAQ'"></faq>
+   <contact *ngIf="pageTitle === 'Contact'"></contact> -->
+</div>

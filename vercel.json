@@ -1,7 +1,15 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "angular.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/my-website/browser"
+      }
+    }
+  ],
   "buildCommand": "ng build --configuration=production --base-href=/",
-  "outputDirectory": "dist/my-website/browser",
   "routes": [
     {
       "src": "/(.*)",

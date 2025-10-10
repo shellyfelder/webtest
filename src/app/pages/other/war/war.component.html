@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <h1 class="title">War! Book Character Edition</h1>
+
+  <!-- Groups Display -->
+  <div class="page">
+    <!-- Group 1 -->
+    <div class="side">
+      <h2>Group 1</h2>
+      <h4>({{ group1.length }})</h4>
+      <ng-container *ngIf="current1; else group1Lose">
+        <img
+          [src]="'/assets/images/' + gameType + '/' + current1.img"
+          [alt]="current1.name"
+          class="image"
+        />
+        <p><b>{{ current1.name }}</b></p>
+        <button (click)="handleWin(1)">Win</button>
+      </ng-container>
+      <ng-template #group1Lose>
+        <p>You lose!</p>
+      </ng-template>
+    </div>
+
+    <!-- Group 2 -->
+    <div class="side">
+      <h2>Group 2</h2>
+      <h4>({{ group2.length }})</h4>
+      <ng-container *ngIf="current2; else group2Lose">
+        <img
+          [src]="'/assets/images/' + gameType + '/' + current2.img"
+          [alt]="current2.name"
+          class="image"
+        />
+        <p><b>{{ current2.name }}</b></p>
+        <button (click)="handleWin(2)">Win</button>
+      </ng-container>
+      <ng-template #group2Lose>
+        <p>You lose!</p>
+      </ng-template>
+    </div>
+  </div>
+
+  <!-- TIE Button -->
+  <div class="tie-button">
+    <button (click)="handleTie()" [disabled]="group1.length < 4 || group2.length < 4">
+      Tie
+    </button>
+  </div>
+
+  <!-- Set Aside Characters -->
+  <div *ngIf="setAside.length > 0" class="set-aside-wrapper">
+    <h3>Set Aside Characters (Tiebreaker)</h3>
+    <div class="set-aside-list">
+      <div class="set-aside-card" *ngFor="let char of setAside">
+        <img
+          [src]="'/assets/images/' + gameType + '/' + char.img"
+          [alt]="char.name"
+          class="set-aside-img"
+        />
+        <p>{{ char.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

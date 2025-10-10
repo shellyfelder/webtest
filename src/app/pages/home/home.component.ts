@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   standalone: true, // ✅ this is required
   templateUrl: './home.component.html',
 })
-export class HomeComponent {}
+export class Home {}

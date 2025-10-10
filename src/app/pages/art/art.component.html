@@ -1,0 +1,19 @@
+<div class="art">
+   <h1>Art of the Book</h1>
+   <table>
+      <tr class="sub" *ngFor="let item of artlist">
+         <td><img class="artimg" src="{{item.img}}"/></td>
+         <td>
+            <div class="cardbox">
+               <h3><b>{{item.artist}}</b></h3>
+               <h2><b>{{item.name}}</b></h2>
+               <p>{{item.year}}</p>
+               <p>{{item.medium}}</p>
+               <p>{{item.location}}</p>
+               <!-- <p>{{item.desc}}</p> -->
+               <p class="smalltext" [innerHTML]="item.source"></p>
+            </div>
+         </td>
+      </tr>
+   </table>
+</div>

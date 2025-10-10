@@ -32,7 +32,7 @@ body {
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .navbar ul {
@@ -61,7 +61,7 @@ body {
   width: 150px;
   border-radius: 5px;
   display: block;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 

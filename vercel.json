@@ -15,7 +15,19 @@
       "handle": "filesystem"
     },
     {
-      "src": "/.*",
+      "src": "/(.*)\\.js$",
+      "dest": "/$1.js"
+    },
+    {
+      "src": "/(.*)\\.css$",
+      "dest": "/$1.css"
+    },
+    {
+      "src": "/(.*)\\.(png|jpg|jpeg|svg|webp|ico)$",
+      "dest": "/$1.$2"
+    },
+    {
+      "src": "/(.*)",
       "dest": "/index.html"
     }
   ]

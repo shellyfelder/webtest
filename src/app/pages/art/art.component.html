@@ -1,9 +1,9 @@
 <div class="art">
    <h1>Art of the Book</h1>
    <table>
-      <tr class="sub" *ngFor="let item of artlist">
-         <td><img class="artimg" src="{{item.img}}"/></td>
-         <td>
+      <tr class="sub" *ngFor="let item of artlist; let i = index">
+         <td *ngIf="i % 2 === 0"><img class="artimg" src="{{item.img}}"/></td>
+         <td *ngIf="i % 2 === 0">
             <div class="cardbox">
                <h3><b>{{item.artist}}</b></h3>
                <h2><b>{{item.name}}</b></h2>
@@ -14,6 +14,18 @@
                <p class="smalltext" [innerHTML]="item.source"></p>
             </div>
          </td>
+         <td *ngIf="i % 2 !== 0">
+            <div class="cardbox">
+               <h3><b>{{item.artist}}</b></h3>
+               <h2><b>{{item.name}}</b></h2>
+               <p>{{item.year}}</p>
+               <p>{{item.medium}}</p>
+               <p>{{item.location}}</p>
+               <!-- <p>{{item.desc}}</p> -->
+               <p class="smalltext" [innerHTML]="item.source"></p>
+            </div>
+         </td>
+         <td *ngIf="i % 2 !== 0"><img class="artimg-right" src="{{item.img}}"/></td>
       </tr>
    </table>
 </div>

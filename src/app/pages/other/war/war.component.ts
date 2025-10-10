@@ -28,12 +28,16 @@ export class War implements OnInit {
   setAside: Character[] = [];
 
   ngOnInit(): void {
+    const maxTotal = 50;
     const shuffled = [...this.people]
-      .map((p) => ({ ...p, losses: 0 }))
-      .sort(() => Math.random() - 0.5);
+      .map(p => ({ ...p, losses: 0 }))
+      .sort(() => Math.random() - 0.5)
+      .slice(0, maxTotal); // ✅ Limit total number
 
-    this.group1 = shuffled.slice(0, 25);
-    this.group2 = shuffled.slice(26, 51);
+    const half = Math.floor(shuffled.length / 2);
+
+    this.group1 = shuffled.slice(0, half);
+    this.group2 = shuffled.slice(half);
   }
 
   handleWin(winnerGroup: number): void {

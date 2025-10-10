@@ -12,7 +12,10 @@
   "buildCommand": "ng build --configuration=production --base-href=/",
   "routes": [
     {
-      "src": "/(.*)",
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
       "dest": "/index.html"
     }
   ]

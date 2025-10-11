@@ -27,17 +27,28 @@ export class War implements OnInit {
   group2: Character[] = [];
   setAside: Character[] = [];
 
-  ngOnInit(): void {
+  initGame(): void {
+    this.people = characters[this.gameType];
+
     const maxTotal = 50;
     const shuffled = [...this.people]
       .map(p => ({ ...p, losses: 0 }))
       .sort(() => Math.random() - 0.5)
-      .slice(0, maxTotal); // ✅ Limit total number
+      .slice(0, maxTotal);
 
     const half = Math.floor(shuffled.length / 2);
-
     this.group1 = shuffled.slice(0, half);
     this.group2 = shuffled.slice(half);
+    this.setAside = [];
+  }
+
+  ngOnInit(): void {
+    this.initGame();
+  }
+
+  changeGame(newType: GameType): void {
+    this.gameType = newType;
+    this.initGame();
   }
 
   handleWin(winnerGroup: number): void {
@@ -67,13 +78,16 @@ export class War implements OnInit {
   }
 
   handleTie(): void {
-    const group1ToSetAside = this.group1.slice(0, 4);
-    const group2ToSetAside = this.group2.slice(0, 4);
+    const group1Count = this.group1.length > 4 ? 4 : Math.max(this.group1.length - 1, 0);
+    const group2Count = this.group2.length > 4 ? 4 : Math.max(this.group2.length - 1, 0);
+
+    const group1ToSetAside = this.group1.slice(0, group1Count);
+    const group2ToSetAside = this.group2.slice(0, group2Count);
 
     this.setAside = [...this.setAside, ...group1ToSetAside, ...group2ToSetAside];
 
-    this.group1 = this.group1.slice(4);
-    this.group2 = this.group2.slice(4);
+    this.group1 = this.group1.slice(group1Count);
+    this.group2 = this.group2.slice(group2Count);
   }
 
   get current1(): Character | undefined {

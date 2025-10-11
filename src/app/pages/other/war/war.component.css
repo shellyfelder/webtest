@@ -33,6 +33,24 @@
   margin-bottom: 0.5rem;
 }
 
+.strawhat {
+  width: 30px;
+  cursor: pointer;
+
+}
+
+button {
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: white;
+  border: 0.6px solid rgba(0,0,0,0.4);
+  border-radius: 5px;
+}
+
+button:hover {
+  background: rgba(0,0,0,0.1);
+}
+
 .tie-button {
   text-align: center;
   margin-top: 2rem;

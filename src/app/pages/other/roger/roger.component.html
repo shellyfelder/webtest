@@ -1,0 +1,16 @@
+<div class="roger">
+   <img 
+    *ngIf="flyBird"
+    class="flying-bird"
+    src="assets/images/roger/birds.gif"
+    alt="Flying Bird"
+  />
+   <div class="centerbox neon-border">
+      <h3 class="gradient-text">Under Construction </h3>
+      <h1 class="gradient-text">^-^</h1>
+      <img class="bird" src="assets/images/roger/bird.png" (click)="showBird = showBird ? false : true; launchBird()"/>
+   </div>
+   <div *ngIf="showBird" class="top-right-overlay">
+     <p>Owl see you soon!</p>
+   </div>
+</div>

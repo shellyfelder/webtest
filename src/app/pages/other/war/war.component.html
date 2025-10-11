@@ -1,5 +1,9 @@
 <div class="wrapper">
-  <h1 class="title">War! Book Character Edition</h1>
+  <h1 class="title">
+   War! <span *ngIf="gameType === 'jewelThieves'">Book Character</span><span *ngIf="gameType === 'onePiece'">One Piece Character</span> Edition
+   <img *ngIf="gameType === 'jewelThieves'" class="strawhat" (click)="changeGame('onePiece')" src="assets/images/strawhat.png"/>
+   <img *ngIf="gameType === 'onePiece'" class="strawhat" (click)="changeGame('jewelThieves')" src="assets/images/gun.png"/>
+  </h1>
 
   <!-- Groups Display -->
   <div class="page">
@@ -42,7 +46,7 @@
 
   <!-- TIE Button -->
   <div class="tie-button">
-    <button (click)="handleTie()" [disabled]="group1.length < 4 || group2.length < 4">
+    <button (click)="handleTie()" [disabled]="group1.length < 2 || group2.length < 2">
       Tie
     </button>
   </div>

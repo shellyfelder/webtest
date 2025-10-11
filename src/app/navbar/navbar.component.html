@@ -1,14 +1,14 @@
 <div class="navbar">
    <ul>
-      <li (click)="changePage('Home')">Home</li>
-      <li (click)="changePage('About')">About</li>
-      <li (click)="changePage('Books')">Books</li>
-      <li (click)="changePage('Art')">Art</li>
-      <li (click)="changePage('Home')"><img class="josephine" src="assets/images/josephine.jpg"/></li> 
-      <li (click)="changePage('Blog')">Blog</li>
-      <li (click)="changePage('Other')">Other</li>
-      <li (click)="changePage('FAQ')">FAQ</li>
-      <li (click)="changePage('Contact')">Contact</li>
+      <li><span *ngIf="!isPhone" (click)="changePage('Home')">Home</span></li>
+      <li><span *ngIf="!isPhone" (click)="changePage('About')">About</span></li>
+      <li><span *ngIf="!isPhone" (click)="changePage('Books')">Books</span></li>
+      <li><span *ngIf="!isPhone" (click)="changePage('Art')">Art</span></li>
+      <li><img (click)="changePage('Home')" class="josephine" src="assets/images/josephine.jpg"/></li> 
+      <li><span *ngIf="!isPhone" (click)="changePage('Blog')">Blog</span><button *ngIf="isPhone"class="menu-btn"><h1>&#9776;</h1></button></li>
+      <li><span *ngIf="!isPhone" (click)="changePage('Other')">Other</span></li>
+      <li><span *ngIf="!isPhone" (click)="changePage('FAQ')">FAQ</span></li>
+      <li><span *ngIf="!isPhone" (click)="changePage('Contact')">Contact</span></li>
    </ul>
 </div>
 

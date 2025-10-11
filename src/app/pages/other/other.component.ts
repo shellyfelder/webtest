@@ -9,11 +9,9 @@ import { Routes } from '@angular/router';
 })
 export class Other {
 
-
-  openNewTab() {
-    const url = `${window.location.origin}/war`;
+  openNewTab(type: string) {
+    const url = `${window.location.origin}/${type}`;
     window.open(url, '_blank');
   }
-
 
 }

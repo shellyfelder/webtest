@@ -57,6 +57,15 @@ body {
   text-decoration: underline;
 }
 
+.navbar .menu-btn {
+	padding: 5px 15px;
+	background-color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 1px solid black;
+
+}
+
 .josephine {
   width: 150px;
   border-radius: 5px;
@@ -108,6 +117,7 @@ body {
 	font-size: 54px;
 	letter-spacing: 2.2px;
 	font-weight: 100;
+	padding: 0 20px;
 }
 
 
@@ -173,11 +183,13 @@ body {
 /* BOOKS */
 
 .books {
-	background: url('./assets/images/frame4-black.png');
+	background: url('./assets/images/frame4-black4.png');
 	background-size: 85vw;
+	background-repeat: no-repeat;
 	/*background-color: black;*/
 	/*border-radius: 5px;*/
-	height:  100%;
+	/*height: 80%;*/
+	height: 90vw;
 	font-family: 'Nunito', sans-serif;
 	color: white;
 	padding-top: 10.5vw;
@@ -190,12 +202,12 @@ body {
 	font-family: 'Ephesis', cursive;
 	text-align: center;
 	color: white;
-	font-size: 54px;
+	font-size: 50px;
 	letter-spacing: 2.2px;
 	font-weight: 100;
-	padding-bottom: 10px;
+	/*padding-bottom: 10px;*/
+	padding: 40px 40px 10px 25px;
 	margin-top:10px;
-	padding-top: 10px;
 	margin-bottom: 10px;
 }
 
@@ -215,17 +227,34 @@ body {
 	height: 800px;
 	/*min-height: 80vw;*/
 	z-index: 1;
+	max-height: 78vw;
+	overflow-y:scroll;
 }
 
 .bookimg {
-	width: 350px;
+	width: 25vw;
 	float: left;
 	display: inline-block;
 	/*opacity: 0.8;*/
 	margin-right: 15px;
 	margin-left: 15px;
 	border-radius: 10px;
+	padding-top: 40px;
 	/*border: red 1px solid;*/
+}
+
+.books .textblock {
+	padding: 0 25px 0 25px;
+}
+
+.books .footertext {
+	display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 150px;           
+  text-align: center;
+  width: 100%;
+  padding: 0 0 20px 0;
 }
 
 .books .sub {
@@ -314,6 +343,7 @@ body {
 	/*padding-top: 10em;*/
 	margin: 0px;
 	z-index:100;
+	height: 92vw;
 /*	position: absolute;
 */
 }
@@ -333,19 +363,21 @@ body {
 
 .faq .inner {
 	background-color: black;
-	background: rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.1);
 	width: 59.8vw;
 	margin-left: 12.5vw;
 	min-height: 60vw;
 	z-index: 1;
+	height: 79vw;
+	overflow-y: scroll;
 }
 
 .faq .sub {
 	color: white;
-	margin-bottom: 180px;
+	/*margin-bottom: 180px;*/
 	padding-top: 0px;
 	height: 40vw;
-	overflow-y: scroll;
+	/*overflow-y: scroll;*/
 
 }
 
@@ -371,6 +403,7 @@ body {
 	/*padding-top: 10em;*/
 	margin: 0px;
 	z-index:100;
+	height: 92vw;
 }
 
 .contact h1 {
@@ -392,6 +425,8 @@ body {
 	margin-left: 12.5vw;
 	min-height: 80vw;
 	z-index: 1;
+	height: 79vw;
+	overflow-y: scroll;
 }
 
 .contact .sub {
@@ -405,6 +440,17 @@ body {
 	color:  white;
 	font-family: 'Nunito', sans-serif;
 	font-size:  14px;
+}
+
+.contact .iconlinks {
+	font-size: 55px;
+	text-align: center;
+	padding-top: 25px;
+}
+
+.contact .iconlinks a {
+	color: white;
+	padding: 0 10px;
 }
 
 /* OTHER */

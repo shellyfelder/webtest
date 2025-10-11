@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+.roger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: url('/assets/images/roger/galaxy3.gif') no-repeat center center;
+  background-size: cover;
+
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.roger .centerbox {
+	background-color: black;
+	max-width: 30vw;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 10vh;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+.roger .centerbox h3 {
+	margin: 0;
+	font-size: 40px;
+}
+
+.roger .centerbox h1 {
+	margin: 0;
+	font-size: 60px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff69b4, #8a2be2, #ff69b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.roger .bird {
+	width: 150px;
+	cursor: pointer;
+}
+
+.top-right-overlay {
+  position: fixed;         
+  top: 0;
+  right: 0;
+  margin: 10px;
+  z-index: 1000;          
+  /*background-color: black;*/
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(57, 255, 20);
+  text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14;
+}
+
+.neon-border {
+  border: 4px solid #9b00ff;
+  border-radius: 10px;
+  padding: 20px;
+  animation: neon-flash 1s infinite alternate;
+  box-shadow: 0 0 10px #9b00ff, 0 0 20px #9b00ff, 0 0 30px #9b00ff;
+}
+
+@keyframes neon-flash {
+  0% {
+    box-shadow: 
+      0 0 5px #9b00ff,
+      0 0 10px #9b00ff,
+      0 0 15px #9b00ff;
+    border-color: #9b00ff;
+  }
+  100% {
+    box-shadow: 
+      0 0 20px #ff00ff,
+      0 0 30px #ff00ff,
+      0 0 40px #ff00ff;
+    border-color: #ff00ff;
+  }
+}
+
+/* Flying Bird - moves across the screen */
+.flying-bird {
+  position: fixed;
+  top: 40%;              /* Adjust for vertical position */
+  left: -150px;          /* Start off-screen */
+  width: 100px;
+  z-index: 9999;
+  animation: fly-across 3s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fly-across {
+  0% {
+    left: -150px;
+    opacity: 1;
+  }
+  90% {
+    left: 100vw;
+    top: 10;
+    opacity: 1;
+  }
+  100% {
+    left: 100vw;
+    top: 0;
+    opacity: 0;
+  }
+}

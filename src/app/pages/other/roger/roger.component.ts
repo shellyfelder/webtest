@@ -11,10 +11,12 @@ import { CommonModule } from '@angular/common';
 export class Roger {
   showBird = false;
   flyBird = false;
+  birdsflown = false;
 
   launchBird() {
-    if (this.showBird) {
+    if (!this.birdsflown) {
       this.flyBird = true;
+      this.birdsflown = true;
 
       setTimeout(() => {
         this.flyBird = false;

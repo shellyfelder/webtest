@@ -8,8 +8,29 @@
    <div class="centerbox neon-border">
       <h3 class="gradient-text">Under Construction </h3>
       <h1 class="gradient-text">^-^</h1>
-      <img class="bird" src="assets/images/roger/bird.png" (click)="showBird = showBird ? false : true; launchBird()"/>
+      <img class="bird" [ngClass]="{'pointer': !birdsflown}" src="assets/images/roger/bird.png" (click)="showBird = true; launchBird()"/>
    </div>
+   <!-- <div class="mikuDance" *ngIf="showBird">
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+      <img class="miku" src="assets/images/roger/miku.gif"/>
+   </div> -->
    <div *ngIf="showBird" class="top-right-overlay">
      <p>Owl see you soon!</p>
    </div>

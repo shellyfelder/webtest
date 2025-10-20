@@ -39,7 +39,7 @@ export class Art {
       medium: 'Oil on Canvas',
       location: 'Private Collection',
       desc: 'something',
-      source: '<p><a href="https://commons.wikimedia.org/wiki/Paul_C%C3%A9zanne">Public Domain</a></p>',
+      source: '<p><a href="https://commons.wikimedia.org/wiki/File:Grenade_et_poires_dans_une_assiette,_par_Paul_C%C3%A9zanne,_Yorck.jpg?uselang=en#Licensing">Grenade et poires dans une assiette, par Paul Cézanne, Yorck</a>, Wikipedia Commons. Public Domain.</p>',
       img: 'assets/images/pears.jpg'
     },
     {
@@ -49,7 +49,7 @@ export class Art {
       medium: 'Oil on Wood ',
       location: 'Detroit Institute of Arts, Detroit',
       desc: 'something',
-      source: '<p><a href="https://commons.wikimedia.org/wiki/File:Whistler-Nocturne_in_black_and_gold.jpg?uselang=en#Licensing">Public Domain</a></p>',
+      source: '<p><a href="https://commons.wikimedia.org/wiki/File:Whistler-Nocturne_in_black_and_gold.jpg?uselang=en#Licensing">Whistler-Nocturne in black and gold</a>, Wikipedia Commons. Public Domain.</p>',
       img: 'assets/images/nocturn.jpg'
     },
     {

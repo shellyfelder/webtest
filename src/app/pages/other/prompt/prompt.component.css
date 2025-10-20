@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.base {
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 0;
+  font-family: 'Merriweather', serif;
+}
+
+.prompt {
+  display: flex;                  /* Enables horizontal layout */
+  justify-content: center;        /* Optional: center the boxes */
+  align-items: flex-start;        /* Align boxes to the top */
+  flex-wrap: wrap;                /* Allows wrapping on smaller screens */
+  width: 100vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: transparent;  /* Keep background black from parent */
+  gap: 5px;                      /* Optional: spacing between boxes */
+}
+
+.prompt .centerbox {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 45%;  
+  height: 90vh;                   /* Two boxes side by side */
+  min-width: 300px;               /* Avoid collapsing on small screens */
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  overflow-y: scroll;
+}
+
+.prompt .centerbox h3 {
+	margin: 0;
+	font-size: 36px;
+}
+
+.prompt .centerbox h1 {
+	margin: 0;
+	font-size: 48px;
+	padding-bottom: 30px;
+}
+
+.prompt .subCat {
+	padding: 10px 20px;
+	display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prompt .subCat h4 {
+	text-align: left;
+	width: 150px;
+  margin: 0; /* Remove default spacing */
+  white-space: nowrap; /* Prevent wrapping if the text is long */
+}
+
+.prompt select {
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 10px;
+	width: 70%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,6 +10,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/other/roger/roger.component').then(m => m.Roger)
   },
   {
+    path: 'prompt',
+    loadComponent: () => import('./pages/other/prompt/prompt.component').then(m => m.Prompt)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

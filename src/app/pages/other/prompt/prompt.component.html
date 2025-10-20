@@ -1,0 +1,59 @@
+<div class="base">
+<div class="prompt">
+   <div class="centerbox">
+      <h1>Generate a Prompt</h1>
+      <div class="subCat"> 
+         <h4>Characters:</h4>
+         <select [(ngModel)]="prompt.characterType">
+            <option value="BOOK">Book Characters</option>
+            <option value="INPUT">Input Characters</option>
+         </select>
+      </div>
+      <div class="subCat">
+         <h4>Number:</h4>
+         <select [(ngModel)]="prompt.number">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+         </select>
+      </div>
+      <div class="subCat" *ngIf="prompt.characterType === 'BOOK'"> 
+         <h4>Include:</h4>
+         <select ngModel="prompt.characterType">
+            <option value="1">Book Characters</option>
+            <option value="2">Input Characters</option>
+         </select>
+      </div>
+      <div class="subCat" *ngIf="prompt.characterType === 'INPUT'">
+         <h4>Character 1</h4>
+         <input [(ngModel)]="prompt.char1" type="text"/>
+      </div>
+      <div class="subCat" *ngIf="prompt.characterType === 'INPUT' && prompt.number > 1">
+         <h4>Character 2</h4>
+         <input [(ngModel)]="prompt.char2" type="text"/>
+      </div>
+      <div class="subCat" *ngIf="prompt.characterType === 'INPUT' && prompt.number > 2">
+         <h4>Character 3</h4>
+         <input [(ngModel)]="prompt.char3" type="text"/>
+      </div>
+      <div class="subCat">
+         <h4>Category</h4>
+         <select ngModel="prompt.number">
+            <option value="">None</option>
+            <option value="xmas">Christmas</option>
+            <option value="fanfic">FanFic Trope</option>
+            <option value="labyrinth">Labyrinth</option>
+            <option value="buffy">Buffy</option>
+         </select>
+      </div>
+      <div class="subCat">
+         <button>Submit</button>
+      </div>
+   </div> 
+   <div class="centerbox">
+      <div>
+         <h1>New Writing Prompt</h1>
+      </div>
+   </div>
+</div>
+</div>

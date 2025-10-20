@@ -1,6 +1,6 @@
 import {
   isPlatformBrowser
-} from "./chunk-SVNGR7M2.js";
+} from "./chunk-7OPOFTAC.js";
 import {
   CSP_NONCE,
   Injectable,
@@ -22,7 +22,7 @@ import {
   ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-M7TYHMC5.js";
+} from "./chunk-RHP4DXGW.js";
 import "./chunk-WDMUDEB6.js";
 
 // node_modules/@angular/cdk/fesm2022/platform2.mjs

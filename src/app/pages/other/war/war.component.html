@@ -1,6 +1,6 @@
 <div class="wrapper">
   <h1 class="title">
-   War! <span *ngIf="gameType === 'jewelThieves'">Book Character</span><span *ngIf="gameType === 'onePiece'">One Piece Character</span> Edition
+   War! <span *ngIf="gameType === 'jewelThieves'">Book Characters </span><span *ngIf="gameType === 'onePiece'">One Piece Characters </span> 
    <img *ngIf="gameType === 'jewelThieves'" class="strawhat" (click)="changeGame('onePiece')" src="assets/images/strawhat.png"/>
    <img *ngIf="gameType === 'onePiece'" class="strawhat" (click)="changeGame('jewelThieves')" src="assets/images/gun.png"/>
   </h1>

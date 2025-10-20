@@ -19,25 +19,47 @@
       </div>
       <div class="subCat" *ngIf="prompt.characterType === 'BOOK'"> 
          <h4>Include:</h4>
-         <select ngModel="prompt.characterType">
-            <option value="1">Book Characters</option>
-            <option value="2">Input Characters</option>
+         <select ngModel="prompt.include">
+            <option value=""></option>
+            <option value="Davy">Davy</option>
+            <option value="Clarke">Clarke</option>
+            <option value="Roger">Roger</option>
+            <option value="Marcus">Marcus</option>
+            <option value="Jill">Jill</option>
+            <option value="Ishaan">Ishaan</option>
+            <option value="Hafiz">Hafiz</option>
+            <option value="Rales">Rales</option>
+            <option value="Leron">Leron</option>
+            <option value="Porpington">Porpington</option>
+            <option value="Lynn">Lynn</option>
+            <option value="Penny">Penny</option>
+            <option value="Tiddlebiscuit">Tiddlebiscuit</option>
+            <option value="Isabella">Isabella</option>
+            <option value="Fierro">Fierro</option>
+            <option value="Ashlee">Ashlee</option>
+            <option value="Ogden">Ogden</option>
+            <option value="Cesar">Cesar</option>
+            <option value="Romero">Romero</option>
+            <option value="Chip">Chip</option>
+            <option value="Holly">Holly</option>
+            <option value="Hannah">Hannah</option>
+            <option value="Klavidya">Klavidya</option>
          </select>
       </div>
       <div class="subCat" *ngIf="prompt.characterType === 'INPUT'">
-         <h4>Character 1</h4>
+         <h4>Character 1:</h4>
          <input [(ngModel)]="prompt.char1" type="text"/>
       </div>
       <div class="subCat" *ngIf="prompt.characterType === 'INPUT' && prompt.number > 1">
-         <h4>Character 2</h4>
+         <h4>Character 2:</h4>
          <input [(ngModel)]="prompt.char2" type="text"/>
       </div>
       <div class="subCat" *ngIf="prompt.characterType === 'INPUT' && prompt.number > 2">
-         <h4>Character 3</h4>
+         <h4>Character 3:</h4>
          <input [(ngModel)]="prompt.char3" type="text"/>
       </div>
       <div class="subCat">
-         <h4>Category</h4>
+         <h4>Category:</h4>
          <select ngModel="prompt.number">
             <option value="">None</option>
             <option value="xmas">Christmas</option>
@@ -47,7 +69,7 @@
          </select>
       </div>
       <div class="subCat">
-         <button>Submit</button>
+         <button class="submitBtn">Submit</button>
       </div>
    </div> 
    <div class="centerbox">

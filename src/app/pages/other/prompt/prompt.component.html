@@ -9,17 +9,17 @@
             <option value="INPUT">Input Characters</option>
          </select>
       </div>
-      <div class="subCat">
+      <!-- <div class="subCat">
          <h4>Number:</h4>
          <select [(ngModel)]="prompt.number">
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
          </select>
-      </div>
+      </div> -->
       <div class="subCat" *ngIf="prompt.characterType === 'BOOK'"> 
          <h4>Include:</h4>
-         <select ngModel="prompt.include">
+         <select [(ngModel)]="prompt.include">
             <option value=""></option>
             <option value="Davy">Davy</option>
             <option value="Clarke">Clarke</option>
@@ -50,17 +50,17 @@
          <h4>Character 1:</h4>
          <input [(ngModel)]="prompt.char1" type="text"/>
       </div>
-      <div class="subCat" *ngIf="prompt.characterType === 'INPUT' && prompt.number > 1">
+      <div class="subCat" *ngIf="prompt.characterType === 'INPUT'">
          <h4>Character 2:</h4>
          <input [(ngModel)]="prompt.char2" type="text"/>
       </div>
-      <div class="subCat" *ngIf="prompt.characterType === 'INPUT' && prompt.number > 2">
+      <!-- <div class="subCat" *ngIf="prompt.characterType === 'INPUT' && prompt.number > 2">
          <h4>Character 3:</h4>
          <input [(ngModel)]="prompt.char3" type="text"/>
-      </div>
+      </div> -->
       <div class="subCat">
          <h4>Category:</h4>
-         <select ngModel="prompt.number">
+         <select [(ngModel)]="prompt.cat">
             <option value="">None</option>
             <option value="xmas">Christmas</option>
             <option value="fanfic">FanFic Trope</option>
@@ -69,12 +69,27 @@
          </select>
       </div>
       <div class="subCat">
-         <button class="submitBtn">Submit</button>
+         <h4>Extra:</h4>
+         <select [(ngModel)]="prompt.extra">
+            <option value="">None</option>
+            <option value="bonus">Bonus</option>
+            <option value="hardmode">Hard Mode</option>
+         </select>
+      </div>
+      <div class="subCat">
+         <button (click)="handleMessage(prompt)" class="submitBtn">Submit</button>
       </div>
    </div> 
    <div class="centerbox">
-      <div>
-         <h1>New Writing Prompt</h1>
+      <div *ngIf="promptComplete === true && generatedPrompt">
+         <h1>📝 New Writing Prompt 📝</h1>
+         <p><b>Characters:</b> {{generatedPrompt.characters[0]}} and {{generatedPrompt.characters[1]}}</p>
+         <p><b>Setting:</b> {{generatedPrompt.setting}}</p>
+         <p><b>Situation:</b> {{generatedPrompt.situation}}</p>
+         <p><b>Tone:</b> {{generatedPrompt.tone}}</p>
+         <p *ngIf="generatedPrompt.bonus"><b>✨BONUS✨</b> Include {{generatedPrompt.bonus}}</p>
+         <p *ngIf="generatedPrompt.hardmode"><b>‼️ HARD MODE ‼️</b>{{generatedPrompt.hardmode}}</p>
+
       </div>
    </div>
 </div>

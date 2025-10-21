@@ -9,7 +9,8 @@
   <div class="page">
     <!-- Group 1 -->
     <div class="side">
-      <h2>Group 1</h2>
+      <h2 *ngIf="gameType === 'jewelThieves'">Jana's Group</h2>
+      <h2 *ngIf="gameType !== 'jewelThieves'">Group 1</h2>
       <h4>({{ group1.length }})</h4>
       <ng-container *ngIf="current1; else group1Lose">
         <img
@@ -27,7 +28,8 @@
 
     <!-- Group 2 -->
     <div class="side">
-      <h2>Group 2</h2>
+      <h2 *ngIf="gameType === 'jewelThieves'">Shelly's Group</h2>
+      <h2 *ngIf="gameType !== 'jewelThieves'">Group 2</h2>
       <h4>({{ group2.length }})</h4>
       <ng-container *ngIf="current2; else group2Lose">
         <img

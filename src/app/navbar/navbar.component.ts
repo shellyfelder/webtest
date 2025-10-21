@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { HostListener } from '@angular/core';
 
 import { Home } from '../pages/home/home.component';
 import { About } from '../pages/about/about.component';
@@ -22,6 +23,12 @@ export class Navbar {
   title = 'Navbar';
   pageTitle = "Home";
   isPhone = false;
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50; // adjust threshold
+  }
 
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver.observe([Breakpoints.Handset])

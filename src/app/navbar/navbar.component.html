@@ -1,4 +1,4 @@
-<div class="navbar">
+<div class="navbar" [class.scrolled]="isScrolled">
    <ul>
       <li><span *ngIf="!isPhone" (click)="changePage('Home')">Home</span></li>
       <li><span *ngIf="!isPhone" (click)="changePage('About')">About</span></li>
@@ -10,6 +10,10 @@
       <li><span *ngIf="!isPhone" (click)="changePage('FAQ')">FAQ</span></li>
       <li><span *ngIf="!isPhone" (click)="changePage('Contact')">Contact</span></li>
    </ul>
+</div>
+<div class="below-navbar" *ngIf="pageTitle === 'Other' && !isPhone">
+  <img class="goldDetail1" src="assets/images/gold3.png" />
+  <img class="goldDetail2" src="assets/images/gold3.png" />
 </div>
 
 <home *ngIf="pageTitle === 'Home'"></home>

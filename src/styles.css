@@ -24,6 +24,7 @@ html {
 body {
 	padding: 0px;
 	margin: 0px;
+	overflow-x: hidden;
 }
 
 
@@ -35,10 +36,27 @@ body {
 
 /* NAV BAR */
 
-.navbar {
+/*.navbar {
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 20px;
+}*/
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  transition: all 0.3s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  overflow-x: hidden;
+}
+
+.navbar.scrolled {
+  padding: 5px 0; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .navbar ul {
@@ -63,6 +81,10 @@ body {
   text-decoration: underline;
 }
 
+.navbar.scrolled ul li {
+  font-size: 16px; 
+}
+
 .navbar .menu-btn {
 	padding: 5px 15px;
 	background-color: white;
@@ -78,6 +100,34 @@ body {
   display: block;
   margin-top: 20px;
 }
+
+.navbar.scrolled .josephine {
+	margin-top: 0px;
+  width: 70px; /* squished logo */
+}
+
+.below-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 20px; /* space between items */
+}
+
+.goldDetail1{
+  width: 400px; /* Adjust to match design */
+  height: auto;
+  margin-top: -70px;
+  margin-right: 9%;
+}
+
+.goldDetail2 {
+  width: 400px; /* Adjust to match design */
+  height: auto;
+  margin-top: -70px;
+  margin-left: 9%;
+}
+
 
 
 /* PAGES */
@@ -151,32 +201,28 @@ body {
 
 .aboutsub {
 	/*background-color: red;*/
-	background: rgb(255,0,0, .4);
+	/*background: rgb(255,0,0, .4);*/
 	/*opacity: 0.5;*/
-	color: white;
+	/*color: white;
 	margin-bottom: 50px;
 	padding-top: 0px;
-	height: 300px;
+	height: 300px;*/
 }
 
 .aboutimg {
-	height: 400px;
+	width: 100%;
 	float: left;
 	display: inline-block;
 	/*opacity: 0.8;*/
-	background: rgb(255,0,0, .4);
-	margin-right: 15px;
+	/*background: rgb(255,0,0, .4);*/
 	/*border: red 1px solid;*/
 }
 
-.about .imgtwo {
-	margin-left: -15px;
-}
-
-.abouttext {
+.abouttext1 {
 	font-family: 'Nunito', sans-serif;
-	margin-left: 20px;
-	margin-right: 100px;
+	background: rgb(255,255,255, 0.5)
+	/*margin-left: 20px;
+	margin-right: 100px;*/
 }
 
 .about h3 {
@@ -463,9 +509,10 @@ body {
 /* OTHER */
 
 .other {
-	/*background: url('./assets/images/frame3.png');
-	background-size: 85vw;*/
+	background: url('./assets/images/impression3.jpg');
+	/* https://wallpaperaccess.com/full/414361.jpg */
 	color: black;
+	padding: 20px;
 	/*background-color: black;
 	padding: 10px 50px;*/
 	/*padding-top: 12.7vw;*/
@@ -477,7 +524,6 @@ body {
 .other h1 {
 	font-family: 'Ephesis', cursive;
 	text-align: center;
-	color: black;
 	font-size: 54px;
 	letter-spacing: 2.2px;
 	font-weight: 100;
@@ -490,7 +536,6 @@ body {
 .other h2 {
 	font-family: 'Ephesis', cursive;
 	text-align: center;
-	color: black;
 	font-size: 48px;
 	letter-spacing: 2.2px;
 	font-weight: 100;
@@ -504,7 +549,7 @@ body {
 	border: 1px solid black;
 	margin-bottom: 10px;
 	margin-top: 5px;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.6);
 	border-radius: 3px;
 	max-width: 1400px;
 

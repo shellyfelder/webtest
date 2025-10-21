@@ -54,7 +54,7 @@ html, body {
 
 .prompt .centerbox h1 {
 	margin: 0;
-	font-size: 42px;
+	font-size: 36px;
 	padding-bottom: 30px;
 }
 
@@ -63,6 +63,21 @@ html, body {
 	display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.prompt .centerbox b {
+	font-size: 18px;
+	font-family: 'Merriweather', serif;
+}
+
+.prompt .centerbox p {
+	margin: 0;
+	text-align: left;
+	font-size: 16px;
+	padding-left: 7vw;
+	padding-right: 7vw;
+	padding-bottom: 10px;
+	font-family: 'Arial';
 }
 
 .prompt .subCat h4 {
